@@ -18,6 +18,8 @@ You can watch the recording by selecting the image below:
 
 We've included some samples and instructions here should you want to hack your own pumpkin. These samples are in Python and C#.
 
+[Show me the samples!](#samples)
+
 ### Hardware
 
 We've based these samples on the following hardware:
