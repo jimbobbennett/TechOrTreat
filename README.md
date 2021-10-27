@@ -6,7 +6,7 @@ We'll be live streaming our pumpkin hacks on the [Microsoft Reactor](https://dev
 
 You can register for the live stream at the following link:
 
-[![Register here](https://img.shields.io/badge/🎃_Register_here_👻-fd9e00?style=for-the-badge&logo=none)](https://aka.ms/TechandTreatRegistration)
+[![Register here](https://img.shields.io/badge/🎃_Register_here_👻-b35600?style=for-the-badge&logo=none)](https://aka.ms/TechandTreatRegistration)
 
 <!-- Uncomment when the video is live
 You can watch the recording by selecting the image below:
