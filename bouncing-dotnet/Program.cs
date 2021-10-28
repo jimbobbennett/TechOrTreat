@@ -22,6 +22,18 @@ static int GetLedCount() {
     return count;
 }
 
+// Limit a value to between a minimum and maximum value
+// This can prevent out of bounds indexes on the strip
+static int Clamp(int value, int min, int max) {
+    if (value > max) {
+        return max;
+    } else if (value < min) {
+        return min;
+    } else {
+        return value;
+    }
+}
+
 var ledCount = GetLedCount();
 Console.WriteLine($"Coloring {ledCount} LEDs...");
 
@@ -39,11 +51,28 @@ var spiDevice = SpiDevice.Create(connectionSettings);
 // The device we create is how we communicate with our LED's
 var device = new Ws2812b(spiDevice, ledCount);
 var image = device.Image;
-// Clear the previous state.
-image.Clear();
-// Assign all pixels in the LED Strip to have the same color.
-for(int x = 0; x < ledCount; ++x) {
 
-    image.SetPixel(x, 0, Color.Blue);
+var direction = 1;
+var position = 0;
+
+while(true)
+{
+    // Clear the previous state.
+    image.Clear(Color.DarkBlue);
+    // Add a tail to the initial position
+    image.SetPixel(Clamp(position - direction * 2, 0, ledCount - 1), 0, Color.Blue);
+    image.SetPixel(Clamp(position - direction, 0, ledCount - 1), 0, Color.Cyan);
+    image.SetPixel(position, 0, Color.White);
+    device.Update(); // Actually update the LED strip
+    System.Threading.Thread.Sleep(50);
+
+    // Move our position
+    position += direction;
+    if (direction < 0 && position <= 0) {
+        position = 0;
+        direction = 1;
+    } else if (direction > 0 && position >= ledCount - 1) {
+        position = ledCount - 1;
+        direction = -1;
+    }
 }
-device.Update(); // Actually update the LED strip
