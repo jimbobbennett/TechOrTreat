@@ -2,7 +2,7 @@
 
 It's spooky season for those who celebrate Halloween, and to get in the spirit (spirit - get it? 👻) we thought it would be fun to hack on some pumpkins and power them with some electronics and IoT goodness!
 
-We'll be live streaming our pumpkin hacks on the [Microsoft Reactor](https://developer.microsoft.com/reactor/?WT.mc_id=academic-47288-jabenn), so watch along with us, or catch the recording if you are busy haunting a house or doing the monster mash!
+We'll be live streaming our pumpkin hacks on the [Microsoft Reactor](https://developer.microsoft.com/reactor/?WT.mc_id=academic-47288-cxa), so watch along with us, or catch the recording if you are busy haunting a house or doing the monster mash!
 
 You can register for the live stream at the following link:
 
@@ -48,7 +48,7 @@ You can use the [Raspberry Pi Imager](https://www.raspberrypi.com/software/) to 
 
 Before you start the imaging process, you can configure things like WiFi which makes it easier to connect to your Pi remotely. The way to do this is not obvious currently in the Imager. To bring up the configuration dialog press `Ctrl+Shift+X`. In this dialog enable SSH so you can remote support your Pi, and configure your WiFi.
 
-To code on your Pi, you can use [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-47288-jabenn). This can run [on your Pi](https://code.visualstudio.com/docs/setup/raspberry-pi?WT.mc_id=academic-47288-jabenn) if you want to connect your Pi to a keyboard/monitor/mouse. Alternatively you can connect to your Pi using the [Remote SSH extension](https://code.visualstudio.com/docs/remote/ssh?WT.mc_id=academic-47288-jabenn) and develop on VS Code from your PC or Mac. You will need to install the relevant extensions for the programming language you are using.
+To code on your Pi, you can use [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-47288-cxa). This can run [on your Pi](https://code.visualstudio.com/docs/setup/raspberry-pi?WT.mc_id=academic-47288-cxa) if you want to connect your Pi to a keyboard/monitor/mouse. Alternatively you can connect to your Pi using the [Remote SSH extension](https://code.visualstudio.com/docs/remote/ssh?WT.mc_id=academic-47288-cxa) and develop on VS Code from your PC or Mac. You will need to install the relevant extensions for the programming language you are using.
 
 ### Wiring WS2812B LEDs
 
@@ -123,7 +123,7 @@ You should also make sure that your pumpkin is safe from thieves, wildlife or th
 
 ### Python samples
 
-You can find all the samples in the [`python`](./python) folder. Each sample contains 2 files:
+You can find all the Python samples in the [`python`](./python) folder. Each sample contains 2 files:
 
 - `requirements.txt` - a Pip requirements file with all the Pip packages needed for the sample
 - `app.py` - a Python file containing the code for the sample
@@ -161,3 +161,13 @@ Each LED sample sets the brightness of the pixels, on a scale of 0-1. How bright
 | [`spooky-sounds`](./python/spooky-sounds) | Playing spooky sounds through a speaker |
 | [`distance-sensor`](./python/distance-sensor) | How to detect movement using a distance sensor |
 | [`internet-control`](./python/internet-control) | Control your pumpkin via Azure IoT Central |
+
+### .NET samples
+
+You can find all the .NET samples in the [`dotnet`](./dotnet) folder.
+
+These LEDs are often referred to as NeoPixels, and the `Ws2812b` refers to each LED as a `pixel`. You will see this naming convention used in the code.
+
+| Sample | Description |
+| ------ | ----------- |
+| [`multiple-pixels-same`](./dotnet/multiple-pixels-same) | Lighting multiple pixels in the same color |
