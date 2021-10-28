@@ -10,7 +10,7 @@ audio = pyaudio.PyAudio()
 
 # Open the spooky-sound.wav audio file
 with wave.open('spooky-sound.wav', 'rb') as wave_file:
-    # Create an audio output stream using the wudio format from the wave file that has just been opened
+    # Create an audio output stream using the audio format from the wave file that has just been opened
     # This will output to the SPEAKER_CARD_NUMBER speaker
     stream = audio.open(format=audio.get_format_from_width(wave_file.getsampwidth()),
                         channels=wave_file.getnchannels(),
