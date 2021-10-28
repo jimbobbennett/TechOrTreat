@@ -44,7 +44,7 @@ Other Ways to Expand Your Project:
 
 ### Setting up your Pi
 
-You can use the [Raspberry Pi Imager](https://www.raspberrypi.com/software/) to install the Raspberry Pi OS if you don't already have it installed. The full Raspberry Pi OS is recommended as it is easier to configure audio devices.
+You can use the [Raspberry Pi Imager](https://www.raspberrypi.com/software/) to install the Raspberry Pi OS if you don't already have it installed. If you want to develop directly on the Pi, you can use the full desktop Raspberry Pi OS, but if you want to develop remotely you can use Raspberry Pi Lite.
 
 Before you start the imaging process, you can configure things like WiFi which makes it easier to connect to your Pi remotely. The way to do this is not obvious currently in the Imager. To bring up the configuration dialog press `Ctrl+Shift+X`. In this dialog enable SSH so you can remote support your Pi, and configure your WiFi.
 
@@ -146,9 +146,9 @@ To access the LED strips, you need to run the code as `sudo`.
 sudo python3 app.py
 ```
 
-These samples use the Adafruit NeoPixel library, so in the code you will see each LED referred to as a 'pixel'.
+The LED samples use the Adafruit NeoPixel library, so in the code you will see each LED referred to as a 'pixel'.
 
-Each sample sets teh brightness of the pixels, on a scale of 0-1. How bright you can set the pixels depends on what color and the power available. If the brightness is too high for the available power, the pixels will not light up. If you need brighter pixels, you may need a higher amperage power supply. For example, using a USB terminal block with a 1A USB plug won't support as high a brightness as a 2.5A power block. It is advisable to use a power pack like the one linked above that supports higher amperages if you want to light long strips at full brightness.
+Each LED sample sets the brightness of the pixels, on a scale of 0-1. How bright you can set the pixels depends on what color and the power available. If the brightness is too high for the available power, the pixels will not light up. If you need brighter pixels, you may need a higher amperage power supply. For example, using a USB terminal block with a 1A USB plug won't support as high a brightness as a 2.5A power block. It is advisable to use a power pack like the one linked above that supports higher amperages if you want to light long strips at full brightness.
 
 > If your pixels don't light up, as well as checking the power and connections, also try a lower brightness value.
 
