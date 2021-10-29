@@ -1,0 +1,4 @@
+adafruit-circuitpython-neopixel
+azure-iot-device
+pyaudio
+rpi_ws281x

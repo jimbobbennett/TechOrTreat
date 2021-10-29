@@ -16,6 +16,8 @@ This code uses the [Adafruit CircuitPython NeoPixel library](https://pypi.org/pr
 
 1. Read the `app.py` code to understand what it does.
 
+1. Update `PIXEL_COUNT` to the number of pixels you are using.
+
 1. Run the `app.py` sample using `sudo`:
 
     ```sh

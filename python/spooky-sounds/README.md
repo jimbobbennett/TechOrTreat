@@ -105,9 +105,11 @@ aplay --device=plughw:2,0 spooky-sound.wav
     sudo pip3 install -r requirements.txt
     ```
 
-1. Open the `app.py` file, and update the `SPEAKER_CARD_NUMBER` to the card number for your speaker.
+1. Open the `app.py` file.
 
 1. Read the `app.py` code to understand what it does.
+
+1. Update the `SPEAKER_CARD_NUMBER` to the card number for your speaker.
 
 1. Run the `app.py` sample using `sudo`:
 

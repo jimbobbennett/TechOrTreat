@@ -89,15 +89,21 @@ Using pin to pin jumper wires, connect the red wire on the connector of the LED 
 
 The control circuit allows your Pi to send messages to the LEDs to control them. This needs to be a compete circuit, from a GPIO pin on the Pi sending the control messages, returning to a ground pin on the Pi.
 
-To connect the control wire, use a pin to connector jumper cable to connect the middle (green) wire on the LED connector block to GPIO pin 18, This is the 6th pin from the SD card slot end on the outside line of GPIO pins. You can see the location of all the pins in the [Raspberry Pi GPIO documentation](https://www.raspberrypi.com/documentation/computers/os.html#gpio-and-the-40-pin-header).
+To connect the control wire, use a pin to connector jumper cable to connect the middle (green) wire on the LED connector block to the GPIO pins.
+
+- If you are using the Python samples, connect the control wire to pin 18, This is the 6th pin from the SD card slot end on the outside line of GPIO pins.
+
+    ![The control wire on pin 18 and the ground wire on a ground pin on the Pi](./images/pi-led-pins.png)
+
+- If you are using the .NET samples, connect the control wire to pin 10, This is the 10th pin from the SD card slot end on the inside line of GPIO pins.
+
+    ![The control wire on pin 18 and the ground wire on a ground pin on the Pi](./images/pi-led-pins-10.png)
+
+> You can see the location of all the pins in the [Raspberry Pi GPIO documentation](https://www.raspberrypi.com/documentation/computers/os.html#gpio-and-the-40-pin-header).
 
 To connect the ground to complete the circuit, you need to connect one of the ground GPIO pins to the ground wire of the LED strip. If you are using LED strip linked above, then there is a second ground wire not connected to the LEDs you can use. Strip the end of the black wire, and wrap it around the pin end of a pin to connector jumper wire, fixing it in place with tape. Then connect the other end to one of the Pi's GPIO ground pins, such as the one 3rd from the SD card end of the Pi on the outside edge.
 
 > If you are using different LEDs you may need to convert the single ground wire into 2 using multiple wires.
-
-![The control wire of the LED strip connected to the GPIO pin 18 on the Pi, and the ground wire connected to the ground GPIO pin](./images/pi-control-wire.png)
-
-![The control wire on pin 18 and the ground wire on a ground pin on the Pi](./images/pi-led-pins.png)
 
 ### Using Grove sensors
 
@@ -122,6 +128,8 @@ You should also make sure that your pumpkin is safe from thieves, wildlife or th
 ## Samples
 
 ### Python samples
+
+These code samples require Python 3 to be installed on your Pi.
 
 You can find all the Python samples in the [`python`](./python) folder. Each sample contains 2 files:
 
@@ -170,4 +178,7 @@ These LEDs are often referred to as NeoPixels, and the `Ws2812b` refers to each 
 
 | Sample | Description |
 | ------ | ----------- |
-| [`multiple-pixels-same`](./dotnet/multiple-pixels-same) | Lighting multiple pixels in the same color |
+| [`get-started`](./dotnet/get-started) | Getting started with LEDs by lighting multiple pixels in the same color |
+| [`bouncing`](./dotnet/bouncing) | A bouncing light |
+| [`wave`](./dotnet/wave) | Light the lights in a sine wave |
+| [`image-scan`](./dotnet/image-scan) | Change the color of the lights to follow the colors in an image |

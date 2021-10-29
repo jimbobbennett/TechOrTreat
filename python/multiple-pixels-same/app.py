@@ -7,7 +7,7 @@ PIXEL_COUNT = 6
 # Define the brightness
 BRIGHTNESS = 1.0
 
-# Create a pixels collection using GPIO pin 18 (Board.D18) using the degined pixel count and brightness
+# Create a pixels collection using GPIO pin 18 (Board.D18) using the defined pixel count and brightness
 # The auto_write is set to off - this means when you update the color of a pixel it won't happen
 # immediately, instead you have to commit the colors. This is faster and smoother when updating
 # multiple pixels at once
