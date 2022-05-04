@@ -10,7 +10,7 @@ from azure.iot.device import MethodResponse, MethodRequest
 # Set up the connection details for the IoT Central app
 ID_SCOPE = ''
 DEVICE_ID = ''
-PRIMARY_KEY = '+7QNskIREiFdK1if8WdXMoRuwEm4kYffaQ4='
+PRIMARY_KEY = ''
 
 # The number of pixels in the LED strip
 PIXEL_COUNT = 6
